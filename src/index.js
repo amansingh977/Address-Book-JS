@@ -5,7 +5,7 @@ const addressBook = new AddressBook();
 
 try {
     const contact1 = new Contact(
-        "Aman", "Singh", "Bhopal", "India", "In", "100001", "9876543210", "amansinghrajawat09@gmail.com"
+        "Aman", "Singh", "Bhopal", "India", "In", "100001", "9876543210", "amansinghrajawat@gmail.com"
     );
     console.log(addressBook.addContact(contact1)); 
 
@@ -13,7 +13,9 @@ try {
         "Rakesh", "Soni", "Bhopal", "India","In","1000000","9197979988","rakeshsoni395@gmail.com"
     )
     console.log(addressBook.addContact(contact2)); 
-    console.log("All Contacts", addressBook.getAllContacts());
+    console.log("All Contacts Before editing", addressBook.getAllContacts());
+    console.log(addressBook.editContact("Rakesh", { address: "Pipariya", city: "New York", phone: "9234567890" }));
+    console.log("All Contacts After editing", addressBook.getAllContacts());
 } catch (error) {
     console.error("Error:", error.message);
 }
