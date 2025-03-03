@@ -14,7 +14,7 @@ try {
     )
     console.log(addressBook.addContact(contact2)); 
     console.log("All Contacts Before editing", addressBook.getAllContacts());
-    console.log(addressBook.editContact("Rakesh", { address: "Pipariya", city: "New York", phone: "9234567890" }));
+    console.log(addressBook.editContact("Rakesh", { address: "Bhopal", city: "New York", phone: "9234567890" }));
     console.log("All Contacts After editing", addressBook.getAllContacts());
     console.log(addressBook.deleteContact("Rakesh"));
     console.log("All Contacts After Deleting:", addressBook.getAllContacts());
@@ -23,7 +23,11 @@ try {
     const duplicateContact = new Contact(
         "Aman", "Singh", "Bhopal", "India", "In", "100001", "9876543210", "amansinghrajawat09@gmail.com"
     );
-    console.log(addressBook.addContact(duplicateContact)); 
+    console.log(addressBook.addContact(duplicateContact));  
+
+    console.log("Contacts in India:");
+    console.log(addressBook.searchByCityOrState("India"));
+
 } catch (error) {
     console.error("Error:", error.message);
 }
